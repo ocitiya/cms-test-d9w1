@@ -1,0 +1,76 @@
+/** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
+
+export default {
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+  ],
+  safelist: [
+    'hover:bg-gray-100',
+    'bg-gray-100'
+  ],
+  theme: {
+    colors: {
+      current: '#f23a2e',
+      transparent: 'transparent',
+      //amber: colors.amber,
+      black: colors.black,
+      blue: colors.blue,
+      cyan: colors.cyan,
+      emerald: colors.emerald,
+      fuchsia: colors.fuchsia,
+      gray: colors.neutral,
+      blueGray: colors.slate,
+      coolGray: colors.gray,
+      //trueGray: colors.trueGray,
+      warmGray: colors.warmGray,
+      green: colors.green,
+      indigo: colors.indigo,
+      lime: colors.lime,
+      orange: colors.orange,
+      pink: colors.pink,
+      purple: colors.purple,
+      red: colors.red,
+      rose: colors.rose,
+      sky: colors.sky,
+      teal: colors.teal,
+      violet: colors.violet,
+      yellow: colors.amber,
+      white: colors.white,
+    },
+    textColor: {
+      white: "#FFF",
+      black: "#000",
+      black: colors.black,
+      blue: colors.blue,
+      cyan: colors.cyan,
+      emerald: colors.emerald,
+      fuchsia: colors.fuchsia,
+      gray: colors.neutral,
+      blueGray: colors.slate,
+      coolGray: colors.gray,
+      //trueGray: colors.trueGray,
+      warmGray: colors.warmGray,
+      green: colors.green,
+      indigo: colors.indigo,
+      lime: colors.lime,
+      orange: colors.orange,
+      pink: colors.pink,
+      purple: colors.purple,
+      red: colors.red,
+      rose: colors.rose,
+      sky: colors.sky,
+      teal: colors.teal,
+      violet: colors.violet,
+      yellow: colors.amber,
+      white: colors.white,
+    },
+    extend: {},
+  },
+  plugins: [],
+}
+
