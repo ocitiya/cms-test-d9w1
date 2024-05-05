@@ -47,7 +47,10 @@ class ProductController extends Controller {
                 'category_id' => ['required', 'numeric', function ($attribute, $value, $fail) use ($request) {
                     if (!Category::find($value)) $fail("Kategori tidak ditemukan"); 
                 }],
-                'name' => ['required', 'max:255'],
+                'name' => ['required', 'max:255', function ($attribute, $value, $fail) use ($request) {
+                    $checkProduct = Product::where("name", $request->input("name"))->count();
+                    if ($checkProduct > 0) $fail("Nama produk sudah ada!"); 
+                }],
                 'purchase_price' => ['required', 'regex:/^\d{1,3}(,\d{3})*(\.\d{1,2})?$/'],
                 'stock' => ['required', 'regex:/^\d{1,3}(,\d{3})*$/', function ($attribute, $value, $fail) use ($request) {
                     if (!is_numeric($value)) {
